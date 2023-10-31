@@ -27,7 +27,7 @@ from setuptools import setup, find_packages
 # Les données de projet
 setup(
     name='my_task_manager',
-    version='1.16',
+    version='1.17',
     description='Métadonnées et informations sur la construction de projet To-do List',
     author='Alban Pereira, Yuchen Xia, Aurélien Raulo, Salimatou Traore',
     author_email='alban.pereira@telecom-paris.fr, yuchen.xia@telecom-paris.fr, \

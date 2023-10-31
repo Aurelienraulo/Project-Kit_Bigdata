@@ -208,7 +208,9 @@
 <section id="module-tasks.main_gui">
 <span id="tasks-main-gui-module"></span><h2>tasks.main_gui module<a class="headerlink" href="#module-tasks.main_gui" title="Link to this heading">#</a></h2>
 <p>Task Manager Application with Graphical User Interface (GUI).</p>
-<p>This application provides a graphical user interface (GUI) for managing a list of tasks. Users can add tasks, view tasks, mark tasks as completed, and view archived tasks using the provided GUI.</p>
+<p>This application provides a graphical user interface (GUI) for managing
+a list of tasks. Users can add tasks, view tasks, mark tasks as completed,
+and view archived tasks using the provided GUI.</p>
 <p>Main Features:
 - Add a new task with a name and description.
 - View the list of active tasks.
@@ -240,7 +242,8 @@ use_gui(task_list)</p>
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tasks.main_gui.</span></span><span class="sig-name descname"><span class="pre">TaskManagerGUI</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">task_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tasks/main_gui.html#TaskManagerGUI"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.main_gui.TaskManagerGUI" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Task Manager Application with Graphical User Interface (GUI).</p>
-<p>This application provides a graphical user interface (GUI) for managing a list of tasks. Users can add tasks, view tasks, mark tasks as completed, and view archived tasks using the provided GUI.</p>
+<p>This application provides a graphical user interface (GUI) for managing a list of tasks.
+Users can add tasks, view tasks, mark tasks as completed, and view archived tasks using the provided GUI.</p>
 <p>Main Features:
 - Add a new task with a name and description.
 - View the list of active tasks.
@@ -445,18 +448,24 @@ Finally, calls the display_tasks method to update the display of tasks.</p>
 <dt class="sig sig-object py" id="id1">
 <span class="sig-name descname"><span class="pre">complete_selected_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tasks/main_gui.html#TaskManagerGUI.complete_selected_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition">#</a></dt>
 <dd><p>Mark the selected task as completed.</p>
-<p>If there is a selected task, it retrieves the name of the task and marks it as completed using the <cite>mark_task_completed</cite> method of the <cite>TaskList</cite> class.
-It sets <cite>self.selected_task</cite> to None and updates the display of tasks by calling the <cite>display_tasks</cite> method.
-It updates the text of the <cite>details_label</cite> to “Détails de la Tâche” and clears the text in the <cite>details_text</cite> widget.</p>
+<p>If there is a selected task, it retrieves the name of the task
+and marks it as completed using the <cite>mark_task_completed</cite> method of the <cite>TaskList</cite> class.
+It sets <cite>self.selected_task</cite> to None and updates the display of tasks
+by calling the <cite>display_tasks</cite> method.
+It updates the text of the <cite>details_label</cite> to “Détails de la Tâche”
+and clears the text in the <cite>details_text</cite> widget.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="id2">
 <span class="sig-name descname"><span class="pre">delete_selected_task</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tasks/main_gui.html#TaskManagerGUI.delete_selected_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id2" title="Link to this definition">#</a></dt>
 <dd><p>Delete the selected task from the task list.</p>
-<p>If there is a selected task, it retrieves the name of the task and removes it from the task list using the <cite>remove_task</cite> method of the <cite>TaskList</cite> class.
-It sets <cite>self.selected_task</cite> to None and updates the display of tasks by calling the <cite>display_tasks</cite> method.
-It updates the text of the <cite>details_label</cite> to “Détails de la Tâche” and clears the text in the <cite>details_text</cite> widget.</p>
+<p>If there is a selected task, it retrieves the name of the task
+and removes it from the task list using the <cite>remove_task</cite> method of the <cite>TaskList</cite> class.
+It sets <cite>self.selected_task</cite> to None and updates the display of tasks
+by calling the <cite>display_tasks</cite> method.
+It updates the text of the <cite>details_label</cite> to “Détails de la Tâche”
+and clears the text in the <cite>details_text</cite> widget.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -472,7 +481,10 @@ Shows an information message box with the text string.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="id4">
 <span class="sig-name descname"><span class="pre">display_selected_task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tasks/main_gui.html#TaskManagerGUI.display_selected_task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id4" title="Link to this definition">#</a></dt>
-<dd><p>Update the details section of the GUI with the selected task’s information and displays buttons for deleting the task, marking it as completed, and displaying archived tasks. If no task is selected, it hides the details section and the buttons.</p>
+<dd><p>Display selected task details.</p>
+<p>Update the details section of the GUI with the selected task’s information
+and displays buttons for deleting the task, marking it as completed, and displaying archived tasks.
+If no task is selected, it hides the details section and the buttons.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>event</strong> – The event object that triggered the method, usually a mouse click event.</p>
@@ -520,15 +532,17 @@ Iterates over the tasks in the task list and inserts their names into the task l
 <dd class="field-odd"><p><strong>task_list</strong> (<a class="reference internal" href="#tasks.tasklist.TaskList" title="tasks.tasklist.TaskList"><em>TaskList</em></a>) – An instance of the TaskList class representing a list of tasks.</p>
 </dd>
 </dl>
-<dl class="simple">
+<dl>
 <dt>Example Usage:</dt><dd><p>task_list = TaskList()
 use_gui(task_list)</p>
 </dd>
 <dt>Flow:</dt><dd><ol class="arabic simple">
 <li><p>Creates a Tkinter root window and sets its title.</p></li>
-<li><p>Creates an instance of the TaskManagerGUI class, passing the root window and the task_list as arguments.</p></li>
-<li><p>Calls the run method of the TaskManagerGUI instance, which starts the GUI event loop and displays the GUI to the user.</p></li>
 </ol>
+<p>2. Creates an instance of the TaskManagerGUI class,
+passing the root window and the task_list as arguments.
+3. Calls the run method of the TaskManagerGUI instance,
+which starts the GUI event loop and displays the GUI to the user.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -556,13 +570,17 @@ use_gui(task_list)</p>
 </div></blockquote>
 <ul class="simple">
 <li><p>Methods:
-- __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.
+- __init__(self, name, description): Initializes a Task object with the provided name and description.
+The task is created with a unique ID, and completion status is set to False.
 - mark_completed(self): Marks the task as completed by setting the completion status to True.
-- __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.</p></li>
+- __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID,
+name, description, completion status, and creation date.</p></li>
 </ul>
 <p>Exceptions:
 - ValueError: If the name or description is not provided during task initialization.</p>
-<p>This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.</p>
+<p>This class is used to represent individual tasks within the to-do list application, allowing users to create,
+manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name,
+description, completion status, and creation date.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="tasks.task.Task">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tasks.task.</span></span><span class="sig-name descname"><span class="pre">Task</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tasks/task.html#Task"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.task.Task" title="Link to this definition">#</a></dt>
@@ -582,13 +600,17 @@ use_gui(task_list)</p>
 </div></blockquote>
 <ul class="simple">
 <li><p>Methods:
-- __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.
+- __init__(self, name, description): Initializes a Task object with the provided name and description.
+The task is created with a unique ID, and completion status is set to False.
 - mark_completed(self): Marks the task as completed by setting the completion status to True.
-- __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.</p></li>
+- __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID,
+name, description, completion status, and creation date.</p></li>
 </ul>
 <p>Exceptions:
 - ValueError: If the name or description is not provided during task initialization.</p>
-<p>This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.</p>
+<p>This class is used to represent individual tasks within the to-do list application,
+allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID)
+and associated information such as name, description, completion status, and creation date.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="tasks.task.Task.mark_completed">
 <span class="sig-name descname"><span class="pre">mark_completed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tasks/task.html#Task.mark_completed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tasks.task.Task.mark_completed" title="Link to this definition">#</a></dt>
@@ -601,7 +623,9 @@ use_gui(task_list)</p>
 <section id="module-tasks.tasklist">
 <span id="tasks-tasklist-module"></span><h2>tasks.tasklist module<a class="headerlink" href="#module-tasks.tasklist" title="Link to this heading">#</a></h2>
 <p>Task List Management Module.</p>
-<p>This module defines a <cite>TaskList</cite> class for managing a list of tasks. The class maintains two lists: <cite>tasks</cite> for active tasks and <cite>archived_tasks</cite> for completed tasks. It provides methods for adding, removing, and archiving tasks, as well as displaying the details of tasks.</p>
+<p>This module defines a <cite>TaskList</cite> class for managing a list of tasks.
+The class maintains two lists: <cite>tasks</cite> for active tasks and <cite>archived_tasks</cite> for completed tasks.
+It provides methods for adding, removing, and archiving tasks, as well as displaying the details of tasks.</p>
 <dl class="simple">
 <dt>Classes:</dt><dd><p>TaskList: Manages a list of tasks and provides task-related operations.</p>
 </dd>

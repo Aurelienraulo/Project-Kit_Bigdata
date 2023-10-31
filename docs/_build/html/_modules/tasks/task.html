@@ -210,14 +210,18 @@
 <span class="sd">  - created_date (datetime): The date and time when the task was created.</span>
 
 <span class="sd">- Methods:</span>
-<span class="sd">  - __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.</span>
+<span class="sd">  - __init__(self, name, description): Initializes a Task object with the provided name and description.</span>
+<span class="sd">  The task is created with a unique ID, and completion status is set to False.</span>
 <span class="sd">  - mark_completed(self): Marks the task as completed by setting the completion status to True.</span>
-<span class="sd">  - __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.</span>
+<span class="sd">  - __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID,</span>
+<span class="sd">  name, description, completion status, and creation date.</span>
 
 <span class="sd">Exceptions:</span>
 <span class="sd">- ValueError: If the name or description is not provided during task initialization.</span>
 
-<span class="sd">This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.</span>
+<span class="sd">This class is used to represent individual tasks within the to-do list application, allowing users to create,</span>
+<span class="sd">manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name,</span>
+<span class="sd">description, completion status, and creation date.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 
@@ -245,21 +249,27 @@
 <span class="sd">      - created_date (datetime): The date and time when the task was created.</span>
 
 <span class="sd">    - Methods:</span>
-<span class="sd">      - __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.</span>
+<span class="sd">      - __init__(self, name, description): Initializes a Task object with the provided name and description.</span>
+<span class="sd">      The task is created with a unique ID, and completion status is set to False.</span>
 <span class="sd">      - mark_completed(self): Marks the task as completed by setting the completion status to True.</span>
-<span class="sd">      - __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.</span>
+<span class="sd">      - __str__(self) -&gt; str: Returns a formatted string representation of the task, including its ID,</span>
+<span class="sd">      name, description, completion status, and creation date.</span>
 
 <span class="sd">    Exceptions:</span>
 <span class="sd">    - ValueError: If the name or description is not provided during task initialization.</span>
 
-<span class="sd">    This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.</span>
+<span class="sd">    This class is used to represent individual tasks within the to-do list application,</span>
+<span class="sd">    allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID)</span>
+<span class="sd">    and associated information such as name, description, completion status, and creation date.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="n">_id_counter</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">description</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initialize a Task object with a unique ID, name, description, completion status (False), and creation date (current datetime).</span>
+<span class="sd">        Initialize a Task object.</span>
+
+<span class="sd">        With a unique ID, name, description, completion status (False), and creation date (current datetime).</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            name (str): The name of the task.</span>
@@ -301,7 +311,8 @@
 <span class="sd">            str: A formatted string representation of the task.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;Terminée&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">completed</span> <span class="k">else</span> <span class="s2">&quot;Non terminée&quot;</span>
-        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;ID : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="se">\n</span><span class="s2">Tâche : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">Description : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s2">Statut : </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="se">\n</span><span class="s2">Date de création : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">created_date</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span></div>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;ID : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="se">\n</span><span class="s2">Tâche : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">Description : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="se">\n</span><span class="s2">Statut : </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span> \
+            <span class="sa">f</span><span class="s2">&quot;Date de création : </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">created_date</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span></div>
 
 </pre></div>
         </article>
