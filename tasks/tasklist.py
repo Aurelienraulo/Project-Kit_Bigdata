@@ -1,7 +1,9 @@
 """
 Task List Management Module.
 
-This module defines a `TaskList` class for managing a list of tasks. The class maintains two lists: `tasks` for active tasks and `archived_tasks` for completed tasks. It provides methods for adding, removing, and archiving tasks, as well as displaying the details of tasks.
+This module defines a `TaskList` class for managing a list of tasks.
+The class maintains two lists: `tasks` for active tasks and `archived_tasks` for completed tasks.
+It provides methods for adding, removing, and archiving tasks, as well as displaying the details of tasks.
 
 Classes:
     TaskList: Manages a list of tasks and provides task-related operations.
@@ -57,7 +59,9 @@ class TaskList:
         """
         Initialize a TaskList object.
 
-        The `TaskList` class is used for managing a list of tasks, including active tasks and archived tasks. During initialization, it creates two empty lists, `tasks` for active tasks and `archived_tasks` for completed tasks.
+        The `TaskList` class is used for managing a list of tasks, including active tasks
+        and archived tasks. During initialization, it creates two empty lists, `tasks`
+        for active tasks and `archived_tasks` for completed tasks.
 
         Example:
         task_list = TaskList()

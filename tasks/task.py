@@ -12,14 +12,18 @@ The `Task` class includes the following attributes and methods:
   - created_date (datetime): The date and time when the task was created.
 
 - Methods:
-  - __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.
+  - __init__(self, name, description): Initializes a Task object with the provided name and description.
+  The task is created with a unique ID, and completion status is set to False.
   - mark_completed(self): Marks the task as completed by setting the completion status to True.
-  - __str__(self) -> str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.
+  - __str__(self) -> str: Returns a formatted string representation of the task, including its ID,
+  name, description, completion status, and creation date.
 
 Exceptions:
 - ValueError: If the name or description is not provided during task initialization.
 
-This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.
+This class is used to represent individual tasks within the to-do list application, allowing users to create,
+manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name,
+description, completion status, and creation date.
 """
 
 
@@ -45,21 +49,27 @@ class Task:
       - created_date (datetime): The date and time when the task was created.
 
     - Methods:
-      - __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.
+      - __init__(self, name, description): Initializes a Task object with the provided name and description.
+      The task is created with a unique ID, and completion status is set to False.
       - mark_completed(self): Marks the task as completed by setting the completion status to True.
-      - __str__(self) -> str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.
+      - __str__(self) -> str: Returns a formatted string representation of the task, including its ID,
+      name, description, completion status, and creation date.
 
     Exceptions:
     - ValueError: If the name or description is not provided during task initialization.
 
-    This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.
+    This class is used to represent individual tasks within the to-do list application,
+    allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID)
+    and associated information such as name, description, completion status, and creation date.
     """
-    
+
     _id_counter = 0
 
     def __init__(self, name, description):
         """
-        Initialize a Task object with a unique ID, name, description, completion status (False), and creation date (current datetime).
+        Initialize a Task object.
+
+        With a unique ID, name, description, completion status (False), and creation date (current datetime).
 
         Args:
             name (str): The name of the task.
@@ -98,4 +108,5 @@ class Task:
             str: A formatted string representation of the task.
         """
         status = "Terminée" if self.completed else "Non terminée"
-        return f"ID : {self.id}\nTâche : {self.name}\nDescription : {self.description}\nStatut : {status}\nDate de création : {self.created_date}\n"
+        return f"ID : {self.id}\nTâche : {self.name}\nDescription : {self.description}\nStatut : {status}\n" \
+            f"Date de création : {self.created_date}\n"

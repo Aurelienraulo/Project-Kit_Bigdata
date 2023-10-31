@@ -1,15 +1,19 @@
 """
 Test Suite for TaskList Class
 
-This test suite contains test cases for the TaskList class, which is responsible for managing a list of tasks. The test cases cover various aspects of task management and verification of expected behaviors.
+This test suite contains test cases for the TaskList class, which is responsible for managing a list of tasks.
+The test cases cover various aspects of task management and verification of expected behaviors.
 
 Test Cases:
     - test_add_task_adds_new_task_to_tasks_list(): Verifies the addition of a new task to the tasks list.
     - test_remove_task_removes_task_from_tasks_list(): Ensures the removal of a task from the tasks list.
-    - test_mark_task_completed_marks_task_as_completed_and_moves_to_archived_tasks_list(): Validates marking a task as completed and moving it to the archived tasks list.
+    - test_mark_task_completed_marks_task_as_completed_and_moves_to_archived_tasks_list(): Validates marking
+    a task as completed and moving it to the archived tasks list.
     - test_add_task_with_empty_name_raises_value_error(): Checks if adding a task with an empty name raises a ValueError.
-    - test_add_task_with_empty_description_raises_value_error(): Checks if adding a task with an empty description raises a ValueError.
-    - test_remove_task_with_non_existent_task_name_prints_error_message(): Verifies that attempting to remove a non-existent task name prints an error message.
+    - test_add_task_with_empty_description_raises_value_error(): Checks if adding a task with an empty description raises
+    a ValueError.
+    - test_remove_task_with_non_existent_task_name_prints_error_message():
+    Verifies that attempting to remove a non-existent task name prints an error message.
 
 Each test case focuses on a specific functionality of the TaskList class and includes an explanation of the expected behavior.
 

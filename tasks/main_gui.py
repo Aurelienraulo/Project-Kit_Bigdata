@@ -1,7 +1,9 @@
 """
 Task Manager Application with Graphical User Interface (GUI).
 
-This application provides a graphical user interface (GUI) for managing a list of tasks. Users can add tasks, view tasks, mark tasks as completed, and view archived tasks using the provided GUI.
+This application provides a graphical user interface (GUI) for managing
+a list of tasks. Users can add tasks, view tasks, mark tasks as completed,
+and view archived tasks using the provided GUI.
 
 Main Features:
 - Add a new task with a name and description.
@@ -47,8 +49,10 @@ def use_gui(task_list):
 
     Flow:
         1. Creates a Tkinter root window and sets its title.
-        2. Creates an instance of the TaskManagerGUI class, passing the root window and the task_list as arguments.
-        3. Calls the run method of the TaskManagerGUI instance, which starts the GUI event loop and displays the GUI to the user.
+        2. Creates an instance of the TaskManagerGUI class,
+        passing the root window and the task_list as arguments.
+        3. Calls the run method of the TaskManagerGUI instance,
+        which starts the GUI event loop and displays the GUI to the user.
 
     Returns:
         None. It creates a GUI for the task manager application.
@@ -64,7 +68,8 @@ class TaskManagerGUI:
     """
     Task Manager Application with Graphical User Interface (GUI).
 
-    This application provides a graphical user interface (GUI) for managing a list of tasks. Users can add tasks, view tasks, mark tasks as completed, and view archived tasks using the provided GUI.
+    This application provides a graphical user interface (GUI) for managing a list of tasks.
+    Users can add tasks, view tasks, mark tasks as completed, and view archived tasks using the provided GUI.
 
     Main Features:
     - Add a new task with a name and description.
@@ -109,7 +114,7 @@ class TaskManagerGUI:
     Returns:
         None. It creates a GUI for the task manager application.
     """
-    
+
     def __init__(self, root, task_list):
         """
         Initialize the GUI for a task manager application.
@@ -122,7 +127,12 @@ class TaskManagerGUI:
             None
 
         Summary:
-        The __init__ method of the TaskManagerGUI class initializes the GUI for a task manager application. It creates the main window and divides it into three parts: left, middle, and right. The left part is for adding tasks, the middle part is for displaying the list of tasks, and the right part is for displaying the details of the selected task. It also creates buttons and input fields for adding tasks, displaying tasks, deleting tasks, marking tasks as completed, and displaying archived tasks.
+        The __init__ method of the TaskManagerGUI class initializes the GUI for a task manager application.
+        It creates the main window and divides it into three parts: left, middle, and right.
+        The left part is for adding tasks, the middle part is for displaying the list of tasks,
+        and the right part is for displaying the details of the selected task.
+        It also creates buttons and input fields for adding tasks, displaying tasks, deleting tasks,
+        marking tasks as completed, and displaying archived tasks.
 
         Example Usage:
         task_list = TaskList()
@@ -198,9 +208,12 @@ class TaskManagerGUI:
         """
         Delete the selected task from the task list.
 
-        If there is a selected task, it retrieves the name of the task and removes it from the task list using the `remove_task` method of the `TaskList` class.
-        It sets `self.selected_task` to None and updates the display of tasks by calling the `display_tasks` method.
-        It updates the text of the `details_label` to "Détails de la Tâche" and clears the text in the `details_text` widget.
+        If there is a selected task, it retrieves the name of the task
+        and removes it from the task list using the `remove_task` method of the `TaskList` class.
+        It sets `self.selected_task` to None and updates the display of tasks
+        by calling the `display_tasks` method.
+        It updates the text of the `details_label` to "Détails de la Tâche"
+        and clears the text in the `details_text` widget.
         """
         if self.selected_task:
             task_name = self.selected_task.name
@@ -214,9 +227,12 @@ class TaskManagerGUI:
         """
         Mark the selected task as completed.
 
-        If there is a selected task, it retrieves the name of the task and marks it as completed using the `mark_task_completed` method of the `TaskList` class.
-        It sets `self.selected_task` to None and updates the display of tasks by calling the `display_tasks` method.
-        It updates the text of the `details_label` to "Détails de la Tâche" and clears the text in the `details_text` widget.
+        If there is a selected task, it retrieves the name of the task
+        and marks it as completed using the `mark_task_completed` method of the `TaskList` class.
+        It sets `self.selected_task` to None and updates the display of tasks
+        by calling the `display_tasks` method.
+        It updates the text of the `details_label` to "Détails de la Tâche"
+        and clears the text in the `details_text` widget.
         """
         if self.selected_task:
             task_name = self.selected_task.name
@@ -279,7 +295,11 @@ class TaskManagerGUI:
 
     def display_selected_task(self, event):
         """
-        Update the details section of the GUI with the selected task's information and displays buttons for deleting the task, marking it as completed, and displaying archived tasks. If no task is selected, it hides the details section and the buttons.
+        Display selected task details.
+
+        Update the details section of the GUI with the selected task's information
+        and displays buttons for deleting the task, marking it as completed, and displaying archived tasks.
+        If no task is selected, it hides the details section and the buttons.
 
         :param event: The event object that triggered the method, usually a mouse click event.
         :return: None
@@ -302,7 +322,8 @@ class TaskManagerGUI:
             # Afficher le bouton "Afficher les tâches archivées"
             self.display_archived_button.pack()
         else:
-            # Masquer le cadre des détails, les boutons et le bouton "Afficher les tâches archivées" si aucune tâche n'est sélectionnée
+            # Masquer le cadre des détails, les boutons et le bouton
+            # "Afficher les tâches archivées" si aucune tâche n'est sélectionnée
             self.right_frame.pack_forget()
             self.delete_button.pack_forget()
             self.complete_button.pack_forget()

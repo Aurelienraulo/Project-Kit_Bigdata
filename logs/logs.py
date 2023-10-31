@@ -18,6 +18,7 @@ Returns:
 
 import logging
 
+
 def configure_logging():
     """
     Log Configuration Function.
